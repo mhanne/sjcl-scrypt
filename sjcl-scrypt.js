@@ -25,7 +25,7 @@ sjcl.misc.scrypt = function(passwd, salt, N, r, p, dkLen) {
   }
 
   function scrypt(passwd, salt, N, r, p, dkLen) {
-    B = sjcl.misc.pbkdf2(passwd, salt, 1, p * 128 * r * 8);
+    var B = sjcl.misc.pbkdf2(passwd, salt, 1, p * 128 * r * 8);
     var V = []; 
     var XY = [];
     for (var i = 0; i < p; i++) {
